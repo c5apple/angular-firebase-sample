@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +17,7 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebase, 'sample'),
     AngularFirestoreModule
   ],
-  providers: [{ provide: FirestoreSettingsToken, useValue: {} }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
