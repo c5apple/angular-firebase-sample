@@ -6,10 +6,12 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,

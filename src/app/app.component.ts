@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  items: Observable<any[]>;
-
-  constructor(private db: AngularFirestore) { }
+  constructor() { }
 
   ngOnInit() {
-    this.items = this.db.collection('items').valueChanges();
   }
 }
