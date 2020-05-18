@@ -36,4 +36,9 @@ export class StoreComponent implements OnInit {
   update(item: Item) {
     this.db.collection<Item>('items').doc(item.id).update(item.deserialize());
   }
+
+  remove(item: Item) {
+    this.db.collection<Item>('items').doc(item.id).delete();
+    this.item = new Item();
+  }
 }

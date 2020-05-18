@@ -3,7 +3,8 @@
   <div><label>age: <input type="text" name="age" [(ngModel)]="item.age"></label></div>
   <div>
     <button type="button" (click)="add(item)" [disabled]="!item.name || !item.age">ADD</button>&nbsp;
-    <button type="button" (click)="update(item)" [disabled]="!item.id">EDIT</button>
+    <button type="button" (click)="update(item)" [disabled]="!item.id">EDIT</button>&nbsp;
+    <button type="button" (click)="remove(item)" [disabled]="!item.id">REMOVE</button>
   </div>
 </form>
 
