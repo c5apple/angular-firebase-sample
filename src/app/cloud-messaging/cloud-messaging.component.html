@@ -1,3 +1,13 @@
-<button (click)="requestPermission()">
-  REQUEST PERMISSION
-</button>
+<div>
+  <button (click)="requestPermission()">
+    REQUEST PERMISSION
+  </button>&nbsp;
+  <button (click)="deleteToken()">
+    DELETE
+  </button>
+</div>
+
+<dl>
+  <dt>Token</dt>
+  <dd>{{token}}</dd>
+</dl>
