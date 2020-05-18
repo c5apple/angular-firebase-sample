@@ -37,4 +37,11 @@ export class CloudMessagingComponent implements OnInit {
         },
       );
   }
+
+  listen() {
+    this.messaging.messages
+      .subscribe((message) => {
+        console.log(message);
+      });
+  }
 }
