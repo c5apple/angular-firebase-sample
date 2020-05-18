@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StoreComponent } from './store/store.component';
+import { CloudMessagingComponent } from './cloud-messaging/cloud-messaging.component';
 
 
 const routes: Routes = [
-  { path: '', component: StoreComponent },
+  { path: 'store', component: StoreComponent },
+  { path: 'messaging', component: CloudMessagingComponent },
 ];
 
 @NgModule({

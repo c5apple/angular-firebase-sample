@@ -8,11 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { StoreComponent } from './store/store.component';
+import { CloudMessagingComponent } from './cloud-messaging/cloud-messaging.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoreComponent
+    StoreComponent,
+    CloudMessagingComponent
   ],
   imports: [
     BrowserModule,
