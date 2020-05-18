@@ -1,3 +1,9 @@
+<form autocomplete="off">
+  <div><label>name: <input type="text" name="name" [(ngModel)]="item.name"></label></div>
+  <div><label>age: <input type="text" name="age" [(ngModel)]="item.age"></label></div>
+  <div><button type="button" (click)="add(item)">ADD</button></div>
+</form>
+
 <ul>
   <li *ngFor="let item of (items | async)">
     name: {{ item.name }} / age: {{ item.age }}
