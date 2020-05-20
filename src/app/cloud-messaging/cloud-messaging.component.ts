@@ -22,6 +22,7 @@ export class CloudMessagingComponent implements OnInit {
         (token) => {
           console.log('Permission granted! Save to the server!', token);
           this.token = token;
+          this.copy(token);
         },
         (error) => { console.error(error); },
       );
@@ -43,5 +44,15 @@ export class CloudMessagingComponent implements OnInit {
       .subscribe((message) => {
         console.log(message);
       });
+  }
+
+  private copy(text: string) {
+    document.addEventListener('copy', (e: ClipboardEvent) => {
+      e.preventDefault();
+      e.clipboardData.setData('text/plain', text);
+
+      alert('コピーしました。' + text);
+    }, { once: true });
+    document.execCommand('copy');
   }
 }
