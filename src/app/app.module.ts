@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { StoreComponent } from './store/store.component';
 import { CloudMessagingComponent } from './cloud-messaging/cloud-messaging.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CloudMessagingComponent } from './cloud-messaging/cloud-messaging.compo
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'sample'),
     AngularFirestoreModule,
-    AngularFireMessagingModule
+    AngularFireMessagingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
